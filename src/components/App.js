@@ -5,20 +5,26 @@ import Landing from "../components/Landing";
 // import Login from "./components/auth/Login";
 import Navbar from "../components/Navbar";
 // import Alert from "./components/Alert";
+import Test from './testing/TestComponent'
 
 //Redux
-// import { Provider } from 'react-redux'
+import { Provider } from 'react-redux'
+import { configureStore } from "./store/configureStore";
 // import store from './store'
+
+const store = configureStore();
+console.log(store.getState());
 
 
 export class Routing extends Component {
   render() {
     return (
-      // <Provider store={store}>
+      <Provider store={store}>
       <Router>
         <Fragment>
           <Navbar />
           <Route exact path="/" component={Landing} />
+          <Route exact path='/Test' component={Test} />
           <section className="container">
           {/* <Alert /> */}
             <Switch>
@@ -28,7 +34,7 @@ export class Routing extends Component {
           </section>
         </Fragment>
       </Router>
-      // </Provider>
+      </Provider>
     );
   }
 }
