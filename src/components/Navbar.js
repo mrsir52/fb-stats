@@ -27,11 +27,7 @@ const Navbar= () => {
               </li>
             </ul>
             <ul className="navbar-nav ml-auto">
-              {/* <li className="nav-item">
-              <Link className="nav-link" to="/Register" title="Home">
-                Sign Up
-              </Link>
-              </li> */}
+             
               <li className="nav-item">
               <Link className="nav-link" to="/Login" title="Home">
                 Log in
